@@ -106,6 +106,7 @@ uint8_t allfreq = 32;                                         // Меняет ч
 uint8_t bgclr = 0;                                            // Общий цвет фона. Переменная для эффектов matrix_pal и one_sin_pal.
 uint8_t bgbri = 0;                                            // Общая фоновая яркость. Переменная для эффектов matrix_pal и one_sin_pal.
 bool    glitter = GLITER_ON;                                  // Флаг включения блеска
+bool    onFlag1 = true;                                       // same as "btn.isSingle" effect but for IR Remote, see IR_Key_Onoff in getirl.h
 bool    background = BACKGR_ON;                               // Флаг включения заполнения фона
 #if CANDLE_KOL >0
 bool    candle = CANDLE_ON;                                 // Флаг включения свечей

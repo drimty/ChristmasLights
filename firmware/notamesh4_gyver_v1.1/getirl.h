@@ -171,6 +171,17 @@ void getirl() {                                                   // This is the
         break;
 #endif
 
+#if IR_Key_Onoff
+      case IR_Key_Onoff :                ///////////////////////////////////////////////////////////////////////////  Включить/выключить сверкание
+        onFlag1 = !onFlag1;
+        FastLED.setBrightness(onFlag1 ? max_bright : 0);
+        FastLED.show();
+#if LOG_ON == 1
+          Serial.print(F("ON/OFF "));
+#endif
+        break;
+#endif
+
 #if IR_Key_BackGround
       case IR_Key_BackGround :                ///////////////////////////////////////////////////////////////////////////  Включить/выключить заполнение фона
         if (Protocol == 1) {          //отключить повтор
